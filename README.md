@@ -1,7 +1,7 @@
 # NKSpeedCoach
 File processing for exports created by the NK SpeedCoach GPS Device
 
-⚠️ This project has been tested with sample files various speedcoach GPS units using metric data, there may be file variations that have not been tested.
+⚠️ This project has been tested with sample files obtained from various speedcoach GPS units using metric data, there are likley file variations that have not been tested. If you have a file that breaks the code, feel free to fix the code or to send me the file!
 
 ## Usage
 
@@ -30,7 +30,7 @@ print(f'Device oarlock inboard length: {rowingdevice.DeviceOarlockInboardLength}
 print(f'Device oarlock oar length: {rowingdevice.DeviceOarlockOarlLength}')
 print(f'Device oarlock seat number: {rowingdevice.DeviceOarlockSeatNumber}')
 print(f'Device oarlock side: {rowingdevice.DeviceOarlockSide}')
->>>
+
 #Session Class
 rowingsession = NKSpeedCoach.NKSession(rowingdata)
 print(f'Session name: {rowingsession.SessionName}')
@@ -45,4 +45,9 @@ print(rowingsession.SessionIntervalSummaries)
 print('Session Stroke Data')
 print(rowingsession.SessionStrokeData)
 ```
+
+## Things to note
+
+The NK device sometimes does a very weird thing where data can be stored as 1 minute an 60 seconds.
+From what I have managed to work out it is a rounding issue and I round the data down to 1 minute and 59.9 seconds.
 
