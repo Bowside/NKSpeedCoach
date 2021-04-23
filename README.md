@@ -48,6 +48,6 @@ print(rowingsession.SessionStrokeData)
 
 ## Things to note
 
-The NK device sometimes does a very weird thing where data can be stored as 1 minute an 60 seconds.
-From what I have managed to work out it is a rounding issue and I round the data down to 1 minute and 59.9 seconds.
+The NK device sometimes does a very weird thing where data can be stored as 1 minute and 60 seconds.
+From what I have managed to work out, it is a rounding issue so I round the value down to 1 minute and 59.9 seconds.
 
